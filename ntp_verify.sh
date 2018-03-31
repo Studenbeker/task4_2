@@ -5,7 +5,7 @@ ps auxw | grep ntpd | grep -v grep > /dev/null
 if [ $? != 0 ];
 then
 echo "NOTICE: ntp is not running"
-echo "NOTICE: ntp is not running" >> /var/mail/root
+echo "NOTICE: ntp is not running" > /var/mail/root
 service ntp start
 fi
 
